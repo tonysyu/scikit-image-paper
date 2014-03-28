@@ -7,8 +7,8 @@
 :institution: Your Institute
 
 :author: Tony Yu
-:email: your@email.com
-:institution: Your Institute
+:email: tyu@enthought.com
+:institution: Enthought Inc.
 
 :author: Johannes L. Schönberger
 :email: jsch@cs.unc.edu

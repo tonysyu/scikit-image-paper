@@ -16,11 +16,6 @@ images on disk.  For efficiency, images are not read until accessed.
     from skimage import io
     ic = io.ImageCollection('data/*')
 
-.. figure:: pano_4_0.png
-
-   Credit: Photographs taken in Petra, Jordan by François Malan. License:
-   CC-BY. :label:`petra`
-
 Figure |nbsp| :ref:`petra` shows the Petra dataset, which displays the same
 facade from two different angles. For this demonstration, we will
 estimate a projective transformation that relates the two images. Since the
@@ -64,11 +59,6 @@ putative matches shown in Figure |nbsp| :ref:`putativematches`.
                                   descriptors2,
                                   cross_check=True)
 
-.. figure:: pano_11_1.png
-
-   Putative matches computed from ORB binary features.
-   :label:`putativematches`
-
 
 2. Transform estimation
 -----------------------
@@ -93,10 +83,6 @@ new matches are shown in Figure |nbsp| :ref:`matchesfiltered`.
     model_robust, inliers = \
         ransac((src, dst), ProjectiveTransform,
                min_samples=4, residual_threshold=2)
-
-.. figure:: pano_15_1.png
-
-   Matches filtered using RANSAC. :label:`matchesfiltered`
 
 3. Warping
 ----------
@@ -183,11 +169,6 @@ The merged image is shown in Figure |nbsp| :ref:`merged`. Note that, while
 the columns are well aligned, the color intensities at the boundaries are not
 well matched.
 
-.. figure:: pano_23_0.png
-
-   The second input frame (middle) is warped to align with the first input
-   frame (left).  The averaged image is shown on the right. :label:`merged`.
-
 4. Blending
 -----------
 
@@ -196,10 +177,19 @@ To blend images smoothly we make use of the open source package Enblend
 pyramids [burt_adelson_0]_, [burt_adelson_1]_.  The final panorama is shown in
 Figure |nbsp| :ref:`pano`.
 
-.. figure:: pano_28_0.png
 
-   The final panorama image, registered and warped using scikit-image, blended
-   with Enblend. :label:`pano`.
+.. figure:: pano.pdf
+    :scale: 100%
+    :figclass: wbht
+
+    An example application of scikit-image: image registration and warping. (A)
+    Original photographs by Francois Malan, taken in Petra, Jordan. License:
+    CC-BY. :label:`petra` (B) Putative matches computed from ORB binary
+    features. :label:`putativematches` (C) Matches filtered using RANSAC.
+    :label:`matchesfiltered` (D) The second input frame (center) is warped to
+    align with the first input frame (left). The two are averaged for a simple
+    blend (right). :label:`merged` (E) The final panorama image, registered and
+    warped using scikit- image, blended with Enblend. :label:`pano`
 
 
 .. [ORB] Ethan Rublee, Vincent Rabaud, Kurt Konolige and Gary Bradski "ORB: An

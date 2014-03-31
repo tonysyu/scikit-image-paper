@@ -56,8 +56,8 @@ fluorescence along the cord, directly proportional to the number of cells. We
 can thus monitor the recovery process and determine which treatments prevent or
 accelerate recovery.
 
-.. figure:: fig-lesion.png
-   :scale: 80%
+.. figure:: fig-lesion.pdf
+   :scale: 120%
    :figclass: bhtw
 
    The ``measure.profile_line`` function being used to track recovery in spinal

@@ -1,13 +1,19 @@
 #!/usr/bin/env python
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
+
+matplotlib.rc('font', size=9)
 
 # Load picture.
 from skimage import data
 image = data.coins()[0:95, 70:370]
 
-fig, axes = plt.subplots(ncols=2, nrows=3, figsize=(6, 4.5))
+fig, axes = plt.subplots(ncols=2, nrows=3, figsize=(6, 4))
+fig.subplots_adjust(left=0.01, right=0.98, top=0.95, bottom=0.01,
+                    wspace=0.12, hspace=0.12)
 ax0, ax1, ax2, ax3, ax4, ax5  = axes.flat
+
 ax0.imshow(image, cmap=plt.cm.gray)
 ax0.set_title('Original')
 ax0.axis('off')
@@ -69,6 +75,4 @@ for region in regionprops(label_image):
                               fill=False, edgecolor='red', linewidth=2)
     ax5.add_patch(rect)
 
-plt.tight_layout()
-plt.savefig('getting_started.png', dpi=200)
-plt.show()
+plt.savefig('getting_started.pdf')

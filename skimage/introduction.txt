@@ -66,7 +66,7 @@ image with one or more image filters, and quickly display the results:
    io.imshow(edges)
 
 
-.. figure:: getting_started.png
+.. figure:: getting_started.pdf
 
     Illustration of several functions available in scikit-image: adaptive threshold,
     local maxima, edge detection and labels. The use of NumPy arrays as our
@@ -262,7 +262,7 @@ data-types.
    9(3):21-29. doi:10.1109/MCSE.2007.53.
 .. [Mahotas] Coelho, L.P. 2013. Mahotas: Open source software for scriptable
    computer vision. Journal of Open Research Software 1(1),
-   DOI: http://dx.doi.org/10.5334/4 
+   DOI: http://dx.doi.org/10.5334/4
 .. [scikit-learn] Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B,
    Grisel O, Blondel M, Prettenhofer P, Weiss R, Dubourg V, Vanderplas J,
    Passos A, Cournapeau D, Brucher M, Perrot M, and Duchesnay E, 2011.
